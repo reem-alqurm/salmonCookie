@@ -68,7 +68,7 @@ let seatel = {
 seatel.calculatCut(seatel.max,seatel.min);
 seatel.calculatCookies();
 seatel.render();
-///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 let Tokyo = {
     storeName : 'Tokyo',
     customercount : [],
