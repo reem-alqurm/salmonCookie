@@ -4,7 +4,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     
-    background-image: url(images/coloer.png);
+    background-image: url(https://pbs.twimg.com/media/EuWJwAkXUAIBu-y?format=png&name=small);
 }
 div {
     background-color:rgba(26, 96, 87, 0.96);
@@ -16,7 +16,7 @@ div {
     content: 8px;
     margin-bottom:50px;
     margin-top:50px;
-    width:1115px;
+    width:635px;
     color: #BFA42C;
     padding-bottom: 50px;
     padding-right:50px;
