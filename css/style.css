@@ -3,7 +3,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&w=1000&q=80);
+    
+    background-image: url(images/coloer.png);
 }
 div {
     background-color:rgba(26, 96, 87, 0.96);
@@ -19,4 +20,15 @@ div {
     color: #BFA42C;
     padding-bottom: 50px;
     padding-right:50px;
+}
+table {
+    border: solid 1px black;
+}
+
+tr , th {
+    border: black 1px solid;
+}
+#img1 {
+    width: 200px;
+    height: 100px;
 }

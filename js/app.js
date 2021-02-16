@@ -1,6 +1,6 @@
 'use strict';
-
 let hours = ['  ','6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+let totalPh = [0, 0, 0, 0, 0, 0, 0, 0,0, 0,0, 0, 0, 0, 0];
 let allstors=[
     ["Seattle", 23, 65, 6.3],
     ["Tokyo",   3,  24, 1.2],
@@ -23,12 +23,9 @@ function Store(storeName,min,max,avg){
     this.sumCookis=0;
     this.callculatcust();
     this.calcookie();
-    this.fillData();
-    this.getAll()
     this.render();
 }
     Store.prototype.callculatcust = function(){
-
         for(let i =0;i<hours.length;i++){
             this.cutomercount.push(randomNum(this.min,this.max));
         }
@@ -37,20 +34,12 @@ function Store(storeName,min,max,avg){
         for(let j =0;j<hours.length;j++){
             let t = Math.floor(((this.cutomercount[j])*(this.avg)));
             this.cookiesNum.push(t)   
+            totalPh[j] =totalPh[j]+t;
             this.sumCookis=this.sumCookis+t;
         }
         console.log(this);
     }
-    Store.prototype.fillData =function(){ 
-        for(let x =0;x<hours.length;x++){
-            this.cookiesPerHour.push(`${hours[x]} : ${this.cookiesNum[x]} cookies`);
-            }
-                this.cookiesPerHour.push(`Total  :  ${this.total}`);
-            }
-    Store.prototype.getAll =function(){
-        this.fillData();
-        return this.cookiesPerHour;
-    }
+  
     Store.prototype.render =function(){
         totalCookis=totalCookis+this.sumCookis;
         let trEl=document.createElement('tr');
@@ -89,6 +78,7 @@ function Store(storeName,min,max,avg){
             trEl.appendChild(thE2);
             for(let i =0 ;i <hours.length-1;i++){
                 let thE2=document.createElement('th');
+                thE2.textContent=totalPh[i];
             trEl.appendChild(thE2);
         }
         let thE4=document.createElement('th');
@@ -100,4 +90,3 @@ function Store(storeName,min,max,avg){
         let sh =new  Store(allstors[e][0], allstors[e][1] ,allstors[e][2] ,allstors[e][3]);
         }
         footer();
-
