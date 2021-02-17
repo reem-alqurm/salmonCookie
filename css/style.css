@@ -25,7 +25,7 @@ table {
     border: solid 1px black;
 }
 
-tr , th {
+tr , th , td {
     border: black 1px solid;
 }
 #img1 {
