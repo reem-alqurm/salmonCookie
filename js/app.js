@@ -5,8 +5,9 @@ let container = document.getElementById('container');
 let megaTotal =0;
 let table = document.createElement('table');
 container.appendChild(table);
+let arrOfObjects = [];
 
-let tableIndex=6;
+
 
 function Location(locationName,min,max,avg){
    this.locationName = locationName;
@@ -16,6 +17,7 @@ function Location(locationName,min,max,avg){
    this.randomCustomers = [];
    this.numOfCookiesSoldPerHour = [];
    this.total = 0;
+   arrOfObjects.push(this)
 
 
 }
@@ -60,7 +62,6 @@ let lima = new Location('Lima',2,16,4.6);
 
 
 headerRow()
- let arrOfObjects = [seattle,tokyo,dubai,paris,lima];
 
 for(let i = 0 ; i <arrOfObjects.length; i ++){
     arrOfObjects[i].randomCustomerPerHour();
@@ -138,19 +139,18 @@ function randomGenrator(min, max) {
   const storName = event.target.nameField.value;
 
   let min = event.target.minField.value;
- 
+  min = parseInt(min);
   let max = event.target.maxField.value;
- 
+  max = parseInt(max);
   let avg = event.target.avgField.value;
   avg = parseFloat(avg);
   
   
 
 let newStoree = new Location (storName, min, max, avg);
-table.deleteRow(tableIndex);
+table.deleteRow(table.rows.length -1);
 newStoree.randomCustomerPerHour();
 newStoree.cookiesSoldPerHour();
 newStoree.render();
-tableIndex ++;
 footerRow();
 }
