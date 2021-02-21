@@ -67,6 +67,7 @@ for(let i = 0 ; i <arrOfObjects.length; i ++){
     arrOfObjects[i].randomCustomerPerHour();
     arrOfObjects[i].cookiesSoldPerHour();
     arrOfObjects[i].render();
+    
 }
 footerRow();
 
@@ -106,22 +107,21 @@ function footerRow(){
     let totalOfTotals = 0;
     for(let i = 0 ; i < hours.length; i++){
         sum = 0;
-       
         for(let j = 0; j < arrOfObjects.length; j++){
             sum = sum + arrOfObjects[j].numOfCookiesSoldPerHour[i];
         
         }
                       
-        megaTotal = megaTotal + sum;
-        th = document.createElement('th');
+        
+        th = document.createElement('td');
         tr.appendChild(th);
         th.textContent = sum;
-
+        megaTotal = megaTotal + sum;
     }
+        totalOfTotals = totalOfTotals + megaTotal;
     let totalOfTotalss = document.createElement('th');
     tr.appendChild(totalOfTotalss);
-    totalOfTotalss.textContent = megaTotal;
- 
+    totalOfTotalss.textContent = totalOfTotals;
 }
 
 function randomGenrator(min, max) {
@@ -151,6 +151,7 @@ let newStoree = new Location (storName, min, max, avg);
 table.deleteRow(table.rows.length -1);
 newStoree.randomCustomerPerHour();
 newStoree.cookiesSoldPerHour();
+megaTotal=0;
 newStoree.render();
 footerRow();
 }
