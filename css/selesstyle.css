@@ -1,0 +1,122 @@
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
+  body{
+       
+    background-image: url(https://pbs.twimg.com/media/EuWJwAkXUAIBu-y?format=png&name=small);
+}
+*{
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  html {
+    display: table;
+    margin: auto;
+  }
+  
+  body{ 
+     padding: 30px 150px; 
+     margin:auto;
+     width: 100%; 
+    
+  }header{
+  
+    width: 100%;
+    margin: 30px;
+   
+  }
+ #salmon
+ {
+     height: 100px;
+     width: 200px;
+     position: relative;
+     bottom: 50px;
+ }
+ #logo{
+     height: 150px;
+     width: 500px;    
+     position: relative;
+     bottom: 50px;
+
+ }nav ul li a{
+text-decoration: none;
+padding: 10px;
+color: brown;
+ }
+ nav ul li {
+     float: right;
+     font-weight: bold;
+     font-size: x-large;
+     position: relative;
+     right: 0px;
+     border:3px solid;
+     border-radius: 8px;
+     
+ }
+
+div {
+    background-color:rgba(26, 96, 87, 0.96);
+    text-align: left;
+    font-family mnmre4sw32 , qonospace;
+    font-weight: bold;
+    border:double; 
+    border-width: 5px;
+    content: 8px;
+    margin-bottom:50px;
+    margin-top:50px;
+    width:670px;
+    height: 300px;
+    color: #BFA42C;
+    padding-bottom: 50px;
+    padding-right:50px;
+}
+table {
+    border: solid 1px black;
+}
+
+tr , th , td {
+    border: black 1px solid;
+}
+#img1 {
+    width: 200px;
+    height: 100px;
+}
+#NewStore{
+    width:800px;
+    height: 100px;
+}
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgba(26, 96, 87, 0.96);
+    border-radius: 6px;
+  }
+  input[type=number] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgba(26, 96, 87, 0.96);
+    border-radius: 6px;
+  }
+  input[type=submit] {
+    background-color: rgba(26, 96, 87, 0.96);
+    border:3px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  label , legend{
+      font-weight: bold;
+  }
+
+    
