@@ -4,6 +4,7 @@
     
     <title>Salmon Cookie Shope </title>
     <link rel="stylesheet" href="css/style.css">
+    
 
 </head>
 <body>
@@ -11,17 +12,105 @@
          <nav>
             <ul>
                 <li><a href="sales.html">Sales</a></li>
-                <img src="images/salmon.png">
+                <img id = "salmon" src="images/salmonpic.png" alt="salmon">
+                <img id ="logo" src="images/salmon.png">
+
             </ul>
         </nav>
     </header>
     <main>
+        <h3>Welcome to our salmon Cookie stand website</h3>
+        <p>What started with a generations-old family recipe in 1977, is now the sweet spot for happiness and joy.
+             We are still the home of the original Cookie Cake, just re-imagined with life’s sweet moments as our inspiration.
+              At our Salmon Cookie , we believe that pure, simple delight is part of living a full life.
+
+        </p>
+        <img id = "sub1" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/fish.jpg?raw=true" alt="subimg1">
+        <img id = "sub2" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/family.jpg?raw=true" alt="subimg2">
+        <img id = "sub3" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/frosted-cookie.jpg?raw=true" alt="subimg3">
+        <p>
+            We promise to treat you to bites of bliss that prove how sweet life can be. 
+            We bake your world a better place with simple and inspired treats: fresh-baked cookies delightfully designed and customized for any craving or celebration.
+        </p>
+        <img id = "sub4" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/cutter.jpeg?raw=true" alt="subimg4">
+        <img id = "sub5" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/chinook.jpg?raw=true" alt="subimg5">
+        <img id = "sub6" src="https://github.com/LTUC/amman-201d14/blob/main/class-08/lab-b/assets/shirt.jpg?raw=true" alt="subimg6">
+
 
 
     </main>
     <footer>
+        <h5>Our Location & Opening Hours</h5> 
+        <div id="map"></div> 
+        <h4>Our Shop opens at 9 AM everyday , you are welcomed !</h4>
+        <h2>Contact Us </h2>
+        <div class="sociallinks">
+            <img id = "fac" src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png" alt="facbook">
+            <img id = "ins" src="http://assets.stickpng.com/thumbs/5ecec78673e4440004f09e77.png" alt="instagram">
+            <img id = "twi" src="https://image.flaticon.com/icons/png/512/23/23681.png" alt="twitter">
+           
+        </div>
 
     </footer>
+<script>
+    // Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});</script>
+<script> 
+ function initMap() { 
+        var uluru = {lat: 28.501859, lng: 77.410320}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: uluru 
+        }); 
+        var marker = new google.maps.Marker({ 
+          position: uluru, 
+          map: map 
+        }); 
+      } 
+    </script> 
+    <script async defer 
+    src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyB2bXKNDezDf6YNVc-SauobynNHPo4RJb8&callback=initMap">
+  </script> 
+ 
 
 </body>
 </html>
